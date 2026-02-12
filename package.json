@@ -1,0 +1,12 @@
+{
+  "name": "vx-links",
+  "version": "1.0.0",
+  "description": "Transform X/Twitter links to vxtwitter.com for better Discord embeds",
+  "scripts": {
+    "build": "bun run build.ts",
+    "watch": "bun run build.ts --watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.287"
+  }
+}
