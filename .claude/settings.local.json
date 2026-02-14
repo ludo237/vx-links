@@ -4,7 +4,11 @@
       "WebSearch",
       "WebFetch(domain:developer.chrome.com)",
       "WebFetch(domain:bun.com)",
-      "Bash(bun run build:*)"
+      "Bash(bun run build:*)",
+      "Bash(git -C /home/ludo/Work/vx-links log --oneline -10)",
+      "WebFetch(domain:cobalt.tools)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.fxtwitter.com)"
     ]
   }
 }

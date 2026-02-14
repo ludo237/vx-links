@@ -3,7 +3,8 @@
   "name": "vx-links",
   "version": "1.0.0",
   "description": "Transform X/Twitter links to vxtwitter.com for better Discord embeds",
-  "permissions": ["contextMenus", "activeTab", "scripting", "clipboardWrite"],
+  "permissions": ["contextMenus", "activeTab", "scripting", "clipboardWrite", "downloads"],
+  "host_permissions": ["*://api.vxtwitter.com/*"],
   "background": {
     "service_worker": "background.js",
     "scripts": ["background.js"]
