@@ -4,6 +4,8 @@
   "description": "Transform X/Twitter links to vxtwitter.com for better Discord embeds",
   "scripts": {
     "build": "bun run build.ts",
+    "build:chrome": "bun run build.ts --target=chrome",
+    "build:firefox": "bun run build.ts --target=firefox",
     "watch": "bun run build.ts --watch"
   },
   "devDependencies": {
