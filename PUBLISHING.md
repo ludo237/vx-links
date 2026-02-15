@@ -67,3 +67,41 @@ AMO reviews can take a few days to a couple of weeks. You'll be notified by emai
 3. Repackage: `cd dist && zip -r ../vx-links.zip . && cd ..`
 4. **Chrome**: Go to the Developer Dashboard, select the extension, click **Package** > **Upload new package**, upload the zip
 5. **Firefox**: Go to the Developer Hub, select the extension, click **Upload a New Version**, upload the zip (and updated source)
+
+# Chrome Web Store Privacy Justifications
+
+## Single purpose
+
+Transform X/Twitter links into vxtwitter.com links for better embeds, with copy and video download support.
+
+## Permission justifications
+
+### `contextMenus`
+
+Used to create two right-click context menu items that appear on X/Twitter links:
+
+- "Copy as vxtwitter link" — copies the transformed vxtwitter.com URL to the clipboard
+- "Download video" — downloads the video from the linked tweet
+
+### `activeTab`
+
+The extension popup reads the current tab's URL to check if it is an X/Twitter link and display the corresponding vxtwitter.com version.
+
+### `scripting`
+
+Used to inject small scripts into the active tab to:
+
+- Write the transformed URL to the clipboard via `navigator.clipboard.writeText`
+- Display a toast notification confirming the action to the user
+
+### `clipboardWrite`
+
+Required to copy transformed vxtwitter.com URLs to the user's clipboard when using the context menu or popup.
+
+### `downloads`
+
+Used to save videos from X/Twitter posts as `.mp4` files via the `chrome.downloads.download` API.
+
+### Host permissions (`*://api.vxtwitter.com/*`)
+
+The extension fetches video metadata (direct video URL) from the vxTwitter API to enable the video download feature.
